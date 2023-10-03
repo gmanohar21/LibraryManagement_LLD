@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-default-login',
@@ -7,7 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./default-login.component.scss']
 })
 export class DefaultLoginComponent implements OnInit {
-  loginForm: FormGroup;
+  loginForm: UntypedFormGroup;
   successMessage = '';
   isFormInitialized = false;
   constructor() {
@@ -19,9 +19,9 @@ export class DefaultLoginComponent implements OnInit {
   }
 
   intializeLoginForm() {
-    this.loginForm = new FormGroup({
-      Email: new FormControl(null, Validators.email),
-      Password: new FormControl(null, Validators.required),
+    this.loginForm = new UntypedFormGroup({
+      Email: new UntypedFormControl(null, Validators.email),
+      Password: new UntypedFormControl(null, Validators.required),
     });
     this.isFormInitialized = true;
   }
