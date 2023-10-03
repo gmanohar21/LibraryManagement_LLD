@@ -1,0 +1,10 @@
+<div *ngIf="isFormInitialized">
+  <form [formGroup]="loginForm">
+    <div>
+      <mat-form-field class="full-width" appearance="outline" (click)="datepicker.open()">
+        <mat-label class="font-size-14">Email</mat-label>
+        <input matInput type="text" formControlName="Email" class="font-size-14" />
+    </mat-form-field>
+    </div>
+  </form>
+</div>
