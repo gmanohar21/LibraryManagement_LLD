@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-default-login',
@@ -12,7 +13,10 @@ export class DefaultLoginComponent implements OnInit {
     Email: new FormControl(''),
     Password: new FormControl(''),
   });;
-  constructor() {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router 
+  ) {
     console.log('default login');
   }
 
@@ -27,6 +31,7 @@ export class DefaultLoginComponent implements OnInit {
   }
   submit(){
     console.log(this.loginForm.value);
+    this.router.navigate(['/user/signup']);
   }
 
 }
