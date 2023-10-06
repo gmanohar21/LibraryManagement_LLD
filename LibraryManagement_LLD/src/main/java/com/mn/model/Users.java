@@ -1,5 +1,7 @@
 package com.mn.model;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,11 +12,11 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Getter
-@Setter
+@Setter                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 @ToString
 @RequiredArgsConstructor
 @Entity
-public class Users {
+public class Users implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer UserId;
