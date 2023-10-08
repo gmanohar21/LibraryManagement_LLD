@@ -20,8 +20,8 @@ import lombok.ToString;
 public class Books {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="BookId")
+	@Column(name="Bookid")
 	private Integer BookId;
-	@Column(name="BookName")
+	@Column(name="Bookname")
 	private String BookName;
 }
